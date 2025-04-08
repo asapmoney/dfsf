@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638794877657725257
-    m_Hash: 4071110823
+      ticks: 638797434112731074
+    m_Hash: 2405387192
   m_LockFileStatus:
     m_FilePath: C:/Users/mikex/Downloads/Chess-AI-main (2)/Chess-AI-main/Unity Project
       Source Code/Chess-final-project/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638794878106194373
-    m_Hash: 3663758021
+      ticks: 638797434130538046
+    m_Hash: 517873031
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -25,6 +25,8 @@ m_ProjectPath: C:/Users/mikex/Downloads/Chess-AI-main (2)/Chess-AI-main/Unity Pr
   Source Code/Chess-final-project/Packages
 m_EditorVersion: 2022.3.46f1 (8e9b8558c41a)
 m_ResolvedPackages:
+<<<<<<< HEAD
+=======
 - packageId: com.unity.2d.sprite@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1782,6 +1784,7 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
+>>>>>>> parent of db34136 (k)
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3747,6 +3750,8 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
+<<<<<<< HEAD
+=======
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
@@ -4120,4 +4125,5 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
+>>>>>>> parent of db34136 (k)
 m_BuiltInPackagesHash: 7989e8b4472413613b60155ad28240f37a325a95
