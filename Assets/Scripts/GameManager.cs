@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void InitialSetup()
-    {
+    {// places all the pieces in their correct positions on the board 
         AddPiece(whiteRook, white, 0, 0);
         AddPiece(whiteKnight, white, 1, 0);
         AddPiece(whiteBishop, white, 2, 0);
@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddPiece(GameObject prefab, Player player, int col, int row)
-    {
+    {// adds a piece to the board and tracks it to the pieces array 
         GameObject pieceObject = board.AddPiece(prefab, col, row);
         player.pieces.Add(pieceObject);
         pieces[col, row] = pieceObject;
@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
     }
 
     public List<Vector2Int> MovesForPiece(GameObject pieceObject, bool realMove = true, bool maximisingPlayer = true)
-    {
+    {// gives the valid moves for a piece
         Piece piece = pieceObject.GetComponent<Piece>();
         Vector2Int gridPoint = GridForPiece(pieceObject);
         List<Vector2Int> locations = piece.MoveLocations(gridPoint);
@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Move(GameObject piece, Vector2Int gridPoint, bool realMove = true)
-    {
+    {//upadtes the pieces array and moves the gameobject 
         Piece pieceComponent = piece.GetComponent<Piece>();
         if (pieceComponent.type == PieceType.Pawn && !HasPawnMoved(piece) && realMove)
         {
@@ -176,7 +176,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject CapturePieceAt(Vector2Int gridPoint, bool realMove = true, Player player = null)
-    {       
+    {       // removes the captuured piece and checks for king capture
         GameObject pieceToCapture = PieceAtGrid(gridPoint);
         if (pieceToCapture.GetComponent<Piece>().type == PieceType.King && realMove)
         {
@@ -321,7 +321,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator AITurn()
-    {
+    {// uses our minimax to calculate the ai's next move 
         yield return new WaitForSeconds(0.5f);
 
 
@@ -347,7 +347,7 @@ public class GameManager : MonoBehaviour
     }
 
     public List<Move> GenerateAllMoves(Player player)
-    {
+    {// lists all possible moves 
         string playerStr;
 
         if (player.name == "white")

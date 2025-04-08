@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class PieceSquareTable
-{
+{// defines positional values for each piece type. the minimax algo uses this to evaluate the board based on the piece positions 
 
     public static float[,] pawnScoreBlack = new float[8, 8]
     {

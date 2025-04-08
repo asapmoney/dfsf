@@ -26,7 +26,7 @@ public class MoveSelector : MonoBehaviour
     }
 
     void Update ()
-    {
+    {// tracks mouse position to highlight tiles
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
@@ -69,7 +69,7 @@ public class MoveSelector : MonoBehaviour
     }
 
     public void CancelMove()
-    {
+    {// cancels the current move selection 
         this.enabled = false;
 
         foreach (GameObject highlight in locationHighlights)
@@ -85,7 +85,7 @@ public class MoveSelector : MonoBehaviour
     }
 
     public void EnterState(GameObject piece)
-    {
+    {//generatres the valid moves for a piece
         movingPiece = piece;
         this.enabled = true;
 
@@ -113,7 +113,7 @@ public class MoveSelector : MonoBehaviour
     }
 
     private void ExitState()
-    {
+    {// disables highlights deselcts the piece and switches to the next player 
         this.enabled = false;
         TileSelector selector = GetComponent<TileSelector>();
         tileHighlight.SetActive(false);
